@@ -129,7 +129,7 @@
     .closing::after{content:"";position:absolute;inset-inline-end:-100px;top:-230px;width:450px;height:450px;border:1px solid rgba(213,178,124,.13);border-radius:50%;pointer-events:none}
     .closing-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:30px}
     .closing h2{font-size:clamp(2.5rem,4vw,4rem);line-height:1;margin:0}
-    .closing p{font:italic 500 1.3rem/1.25 var(--font-display);color:#E6C49A;margin:12px 0 0}
+    .closing .official-signature{display:block;width:min(360px,85vw);height:auto;object-fit:contain;margin:10px 0 0}
     .closing a{white-space:nowrap;padding:13px 22px;background:var(--ivory);color:var(--midnight);border-radius:10px;text-decoration:none;font-size:.81rem;font-weight:700}
     .closing a:hover{background:#F1DED4}
     footer{padding-block:26px;background:#191D28}
@@ -256,7 +256,7 @@
       </div>
       <p class="install-footnote" data-i18n="installNote">Android only · Early test build · This public page is not an app store. Installing updates requires downloading a newer APK.</p>
     </section>
-    <section class="closing"><div class="shell closing-inner"><div><h2 data-i18n="closeTitle">Until then, keep the moment.</h2><p>For everything you want to tell them… later.</p></div><a href="#download-panel" data-i18n="closeButton">Back to download</a></div></section>
+    <section class="closing"><div class="shell closing-inner"><div><h2 data-i18n="closeTitle">Until then, keep the moment.</h2><img class="official-signature" src="./assets/tillthen-logo.png" width="360" height="120" alt="TillThen — For everything you want to tell them… later."></div><a href="#download-panel" data-i18n="closeButton">Back to download</a></div></section>
   </main>
   <footer><div class="shell footer-inner"><div class="footer-brand"><img src="./assets/tillthen-symbol.png" width="25" height="30" alt=""><span>TillThen</span></div><span>© <span id="year">2026</span> TillThen. <span data-i18n="footer">A little time capsule for two.</span></span></div></footer>
   <script>
