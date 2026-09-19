@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1F2430">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="TillThen is a shared time capsule for two. Keep letters, photos and voice notes sealed until your chosen opening day. Discover the Android alpha.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TillThen — For everything you want to tell them… later.">
+  <meta property="og:description" content="A shared time capsule for two. Keep today for a day worth waiting for.">
+  <meta property="og:url" content="https://abdallahkhayroun00-crypto.github.io/TillThen-download/">
+  <meta property="og:image" content="https://abdallahkhayroun00-crypto.github.io/TillThen-download/assets/tillthen-logo.png">
+  <link rel="icon" type="image/png" href="./assets/tillthen-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>TillThen — For everything you want to tell them… later.</title>
+  <style>
+    :root {
+      --midnight:#1F2430;--ivory:#F6F1EC;--rose:#B85C7A;--rose-action:#AE4F70;--gold:#D5B27C;--lavender:#7C6F91;
+      --muted:#C4BFC5;--border:rgba(246,241,236,.15);--font-body:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      --font-display:"Cormorant Garamond",Georgia,serif;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--midnight);color:var(--ivory);font-family:var(--font-body);line-height:1.65;-webkit-font-smoothing:antialiased}
+    body::before{content:"";position:absolute;z-index:-1;pointer-events:none;top:-320px;left:-300px;width:900px;height:900px;background:radial-gradient(circle,rgba(184,92,122,.16),transparent 63%)}
+    a{color:inherit}button{font:inherit}
+    :is(a,button):focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+    .skip{position:absolute;inset-inline-start:16px;top:-80px;background:var(--ivory);color:var(--midnight);z-index:100;padding:11px 18px;border-radius:9px}
+    .skip:focus{top:12px}
+    .shell{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+    .top{position:relative;z-index:10;border-bottom:1px solid rgba(246,241,236,.09);background:rgba(31,36,48,.91);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+    .nav{min-height:88px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;white-space:nowrap}
+    .brand img{height:42px;width:36px;object-fit:contain}
+    .brand-name{font:600 2.15rem/1 var(--font-display);letter-spacing:-.035em}
+    .brand-name span{color:var(--gold)}
+    .navlinks{display:flex;align-items:center;gap:31px;margin-inline-start:auto}
+    .navlinks a{text-decoration:none;font-size:.83rem;color:#D8D0D0;font-weight:500;white-space:nowrap}
+    .navlinks a:hover{color:var(--gold)}
+    .nav-actions{display:flex;align-items:center;gap:11px}
+    .lang{border:1px solid #88778191;background:rgba(246,241,236,.05);color:var(--ivory);border-radius:10px;min-height:42px;padding:8px 13px;font-size:.78rem;font-weight:600;white-space:nowrap;cursor:pointer}
+    .lang:hover{background:rgba(246,241,236,.11)}
+    .nav-cta{display:inline-flex;align-items:center;justify-content:center;background:var(--ivory);color:var(--midnight);border-radius:10px;min-height:42px;padding:10px 17px;text-decoration:none;font-size:.78rem;font-weight:700;white-space:nowrap}
+    .nav-cta:hover{background:#F0DBD2}
+    .hero-wrap{position:relative;isolation:isolate;overflow:hidden}
+    .hero-wrap::before{content:"";position:absolute;z-index:-1;inset-inline-end:-320px;top:30px;width:1050px;height:850px;background:radial-gradient(circle,rgba(184,92,122,.12),rgba(213,178,124,.05) 42%,transparent 70%);pointer-events:none}
+    .hero{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:clamp(32px,6vw,95px);padding-block:102px 124px}
+    .eyebrow{display:inline-flex;align-items:center;gap:11px;color:#E8CED6;letter-spacing:.17em;text-transform:uppercase;font-size:.7rem;font-weight:600}
+    .eyebrow::before{content:"";width:21px;height:1px;background:var(--gold)}
+    h1,h2,h3,p{overflow-wrap:break-word}
+    h1,h2{font-family:var(--font-display);font-weight:600}
+    h1{font-size:clamp(4.0rem,7.1vw,7.1rem);line-height:.93;letter-spacing:-.042em;margin:25px 0 25px;max-width:680px}
+    h1 em{font-style:italic;font-weight:500;color:#E7B8C7}
+    .tagline{font-family:var(--font-display);font-size:clamp(1.35rem,2.2vw,1.8rem);font-style:italic;color:var(--gold);line-height:1.3;margin:0 0 18px}
+    .lead{font-size:.94rem;max-width:510px;color:#D1C8CE;line-height:1.92;margin:0 0 34px}
+    .download{max-width:505px;border:1px solid rgba(213,178,124,.28);border-radius:19px;padding:21px 22px 18px;background:linear-gradient(138deg,rgba(246,241,236,.105),rgba(246,241,236,.036));box-shadow:0 24px 60px rgba(9,11,22,.14);scroll-margin-top:40px}
+    .download-top{display:flex;align-items:center;gap:11px;margin-bottom:18px}
+    .download-top img{width:48px;height:48px;border-radius:12px;object-fit:cover;flex:none}
+    .download-name{font-size:.94rem;font-weight:700;margin:0;line-height:1.35}
+    .download-detail{font-size:.73rem;color:#C6BFC6;margin:3px 0 0}
+    .version{margin-inline-start:auto;align-self:flex-start;border:1px solid rgba(213,178,124,.35);color:#E9D0AB;border-radius:999px;padding:5px 9px;font-size:.64rem;max-width:135px;overflow-wrap:anywhere;line-height:1.4}
+    .download-btn{width:100%;min-height:56px;padding:13px 18px;display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:11px;text-decoration:none;text-align:center;font-size:.91rem;font-weight:700;background:var(--rose-action);color:white;box-shadow:0 8px 24px #160F1738;transition:transform .2s,background .2s}
+    .download-btn svg{width:19px;height:19px;flex:none}
+    .download-btn:hover:not([aria-disabled="true"]){background:#993F61;transform:translateY(-2px)}
+    .download-btn[aria-disabled="true"]{background:rgba(246,241,236,.16);color:#DFD5D8;box-shadow:none;cursor:not-allowed;pointer-events:none}
+    .status{display:flex;align-items:flex-start;gap:8px;font-size:.73rem;line-height:1.65;color:#D2C8CE;margin:13px 0 0}
+    .status::before{content:"";display:block;width:7px;height:7px;flex:none;border-radius:50%;background:var(--gold);margin-top:6px}
+    .release-link{display:inline-flex;align-items:center;gap:6px;font-size:.74rem;color:#EBC4D0;text-underline-offset:4px;margin-top:11px}
+    .release-link:hover{color:white}
+    .hero-foot{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0 0;color:#B9ADB8;font-size:.73rem}
+    .hero-foot span+span::before{content:"·";margin-inline-end:12px;color:var(--gold)}
+    .art{position:relative;min-height:640px;border-radius:30px;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 47% 54%,#48343F 0%,#352B39 42%,#292937 85%);border:1px solid rgba(213,178,124,.2)}
+    .art::before{content:"";position:absolute;width:480px;height:480px;border:1px solid rgba(213,178,124,.13);border-radius:50%;box-shadow:0 0 0 55px rgba(213,178,124,.025),0 0 0 110px rgba(213,178,124,.025)}
+    .art::after{content:"";position:absolute;inset:18px;border:1px solid rgba(213,178,124,.12);border-radius:21px;pointer-events:none}
+    .stars{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,#F6F1EC99 1px,transparent 1.7px),radial-gradient(circle,#D5B27C85 1px,transparent 1.7px);background-size:95px 117px,137px 179px;background-position:8px 24px,75px 62px;opacity:.23}
+    .art-top{position:absolute;z-index:2;top:44px;inset-inline:36px;text-align:center;color:#D4B9C3;font-size:.62rem;text-transform:uppercase;letter-spacing:.22em}
+    .art-top::after{content:"";display:block;margin:15px auto 0;width:34px;height:1px;background:var(--gold)}
+    .art-symbol{position:relative;z-index:2;width:min(73%,375px);height:auto;filter:drop-shadow(0 29px 30px rgba(5,7,18,.28));transform:translateY(14px)}
+    .orbit{position:absolute;z-index:1;width:min(78%,380px);height:90px;border-radius:50%;bottom:112px;border:1px solid #D5B27C4F;background:#D5B27C0B;filter:blur(.4px)}
+    .art-quote{position:absolute;z-index:2;bottom:51px;inset-inline:28px;margin:0;font:italic 500 1.44rem/1.2 var(--font-display);text-align:center;color:#F4DCD6}
+    .floating{position:absolute;z-index:3;border:1px solid #D5B27C69;background:rgba(34,34,47,.92);border-radius:12px;padding:11px 14px;box-shadow:0 16px 35px rgba(0,0,0,.19);max-width:170px}
+    .floating strong{display:block;color:var(--ivory);font-size:.68rem;font-weight:600}
+    .floating small{display:block;color:#B9AAB6;font-size:.61rem;margin-top:4px}
+    .floating.a{top:157px;inset-inline-start:0;transform:rotate(-5deg)}
+    .floating.b{top:330px;inset-inline-end:0;transform:rotate(4deg)}
+    .floating i{display:inline-block;width:7px;height:7px;margin-inline-end:6px;background:var(--rose);border-radius:50%}
+    .illustrative{position:absolute;bottom:12px;inset-inline:15px;z-index:3;text-align:center;font-size:.61rem;color:#AFA2AC;margin:0}
+    .section-kicker{font-size:.68rem;font-weight:700;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin:0 0 13px}
+    .intro{border-block:1px solid rgba(213,178,124,.17);background:linear-gradient(90deg,#272735,#2B2734);padding-block:56px}
+    .intro-inner{display:flex;align-items:center;justify-content:space-between;gap:40px}
+    .intro h2{font-size:clamp(2.4rem,4.2vw,4.0rem);line-height:1.06;margin:0;max-width:560px}
+    .intro p:last-child{max-width:440px;color:#D2C6CD;font-size:.9rem;line-height:1.85;margin:0}
+    .features-section{padding-block:105px 118px}
+    .section-title{font-size:clamp(2.9rem,5vw,4.8rem);line-height:.98;letter-spacing:-.027em;margin:0 0 15px}
+    .section-sub{font-size:.87rem;max-width:570px;color:#BFB5BE;margin:0 0 42px;line-height:1.85}
+    .features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+    .feature{min-height:277px;border:1px solid var(--border);border-radius:18px;padding:28px;background:linear-gradient(150deg,#30303E,#282B38);position:relative;overflow:hidden}
+    .feature::after{content:"";position:absolute;bottom:-56px;inset-inline-end:-46px;width:145px;height:145px;border-radius:50%;border:1px solid rgba(213,178,124,.09)}
+    .feature-icon{height:48px;width:48px;border-radius:13px;display:grid;place-items:center;border:1px solid #B85C7A65;color:#F1C2D0;background:#B85C7A20}
+    .feature-icon svg{width:24px;height:24px}
+    .feature:nth-child(2) .feature-icon{background:#D5B27C1A;border-color:#D5B27C63;color:#EAD1A7}
+    .feature:nth-child(3) .feature-icon{background:#7C6F9138;border-color:#A699B163;color:#C5B8D6}
+    .feature h3{font:600 2.06rem/1.1 var(--font-display);margin:24px 0 13px}
+    .feature p{font-size:.79rem;line-height:1.9;color:#C1B9C2;margin:0}
+    .ritual{padding-block:85px 93px;background:#F6F1EC;color:var(--midnight)}
+    .ritual .section-kicker{color:#8D4963}
+    .ritual-head{text-align:center;margin-bottom:45px}
+    .ritual-head h2{font-size:clamp(3rem,5.4vw,5rem);line-height:1;margin:0 0 12px}
+    .ritual-head p:last-child{color:#5B5760;font-size:.88rem;margin:0}
+    .ritual-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}
+    .ritual-item{position:relative;padding-top:18px;border-top:1px solid #CFC1BD}
+    .ritual-num{font:600 1.8rem/1 var(--font-display);color:#A0526B}
+    .ritual-item h3{font:600 2.0rem/1.12 var(--font-display);margin:15px 0 9px}
+    .ritual-item p{font-size:.82rem;color:#5E5964;line-height:1.84;margin:0}
+    .install{padding-block:95px}
+    .install-head{display:flex;align-items:flex-end;justify-content:space-between;gap:35px;margin-bottom:35px}
+    .install-head .section-title{margin-bottom:0}
+    .install-head p:last-child{margin:0;max-width:395px;color:#BFB5BE;font-size:.84rem}
+    .install-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .install-step{border:1px solid #D5B27C30;border-radius:15px;background:#292A38;padding:23px 24px}
+    .install-step b{display:inline-flex;align-items:center;justify-content:center;height:33px;width:33px;border-radius:50%;border:1px solid #D5B27C80;color:var(--gold);font-size:.78rem}
+    .install-step h3{font-size:.86rem;margin:17px 0 8px}
+    .install-step p{margin:0;color:#BFB7C0;font-size:.77rem;line-height:1.8}
+    .install-footnote{font-size:.72rem;color:#ADADB8;margin:20px 0 0}
+    .closing{padding-block:72px;background:linear-gradient(95deg,#3B2A3A,#342936 55%,#2A2835);border-block:1px solid #D5B27C32;position:relative;overflow:hidden}
+    .closing::after{content:"";position:absolute;inset-inline-end:-100px;top:-230px;width:450px;height:450px;border:1px solid rgba(213,178,124,.13);border-radius:50%;pointer-events:none}
+    .closing-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .closing h2{font-size:clamp(2.5rem,4vw,4rem);line-height:1;margin:0}
+    .closing p{font:italic 500 1.3rem/1.25 var(--font-display);color:#E6C49A;margin:12px 0 0}
+    .closing a{white-space:nowrap;padding:13px 22px;background:var(--ivory);color:var(--midnight);border-radius:10px;text-decoration:none;font-size:.81rem;font-weight:700}
+    .closing a:hover{background:#F1DED4}
+    footer{padding-block:26px;background:#191D28}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#9C98A2;font-size:.72rem}
+    .footer-brand{display:flex;align-items:center;gap:8px;color:#E3D4D2;font:600 1.32rem/1 var(--font-display)}
+    .footer-brand img{height:30px;width:25px;object-fit:contain}
+    [dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3,[dir="rtl"] .brand-name{letter-spacing:0}
+    [dir="rtl"] .art,[dir="rtl"] .art-quote{direction:ltr}
+    [dir="rtl"] .floating{text-align:right}
+    [dir="rtl"] .floating.a{transform:rotate(5deg)}
+    [dir="rtl"] .floating.b{transform:rotate(-4deg)}
+    @media(max-width:1020px){
+      .navlinks{gap:18px}
+      .hero{grid-template-columns:1fr;gap:57px;padding-block:77px 95px}
+      .hero-copy{max-width:670px}
+      .art{width:min(100%,650px);margin-inline:auto}
+      .intro-inner{align-items:flex-start;flex-direction:column;gap:20px}
+      .intro p:last-child{max-width:680px}
+      .features{gap:12px}.feature{padding:24px;min-height:290px}
+    }
+    @media(max-width:700px){
+      .shell{width:min(100% - 36px,1180px)}
+      .nav{min-height:72px;gap:12px}.brand img{width:28px;height:35px}.brand-name{font-size:1.77rem}
+      .navlinks{display:none}.nav-actions{gap:7px}.nav-cta{padding:9px 11px;font-size:.73rem}.lang{min-height:39px;padding:8px 10px;font-size:.73rem}
+      .hero{padding-block:60px 77px;gap:35px}
+      h1{font-size:clamp(3.95rem,12.5vw,6rem);margin-block:23px 22px}
+      .lead{font-size:.86rem}
+      .download{padding:17px}.download-top img{width:43px;height:43px}.version{font-size:.58rem;max-width:101px}
+      .art{min-height:575px;border-radius:22px}
+      .art-symbol{width:min(73%,330px)}
+      .floating.a{top:128px}.floating.b{top:320px}
+      .floating{padding:8px 10px;max-width:139px}.floating strong{font-size:.58rem}.floating small{font-size:.52rem}
+      .art-quote{bottom:43px}
+      .intro{padding-block:46px}
+      .features-section{padding-block:76px 85px}
+      .features{grid-template-columns:1fr}.feature{min-height:0;padding:25px}
+      .feature h3{margin-top:20px}
+      .ritual{padding-block:64px}.ritual-grid{grid-template-columns:1fr;gap:26px}.ritual-head{margin-bottom:33px}
+      .install{padding-block:70px}.install-head{align-items:flex-start;flex-direction:column;gap:16px}
+      .install-steps{grid-template-columns:1fr}
+      .closing{padding-block:58px}.closing-inner{align-items:flex-start;flex-direction:column;gap:26px}
+    }
+    @media(max-width:380px){.nav-cta{display:none}.art{min-height:530px}.art-top{top:34px}.floating.a{top:105px}.floating.b{top:294px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden">
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 17v3h16v-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-letter" viewBox="0 0 24 24"><path d="M3 6.5 12 13l9-6.5M5 5h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-photo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.8" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="8" cy="9" r="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m4 18 6-6 3.5 3 3-3L21 17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-voice" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3m-4 0h8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+  <header class="top">
+    <nav class="shell nav" aria-label="Main navigation">
+      <a class="brand" href="./" aria-label="TillThen — home">
+        <img src="./assets/tillthen-symbol.png" alt="" width="36" height="42">
+        <span class="brand-name">Till<span>Then</span></span>
+      </a>
+      <div class="navlinks"><a href="#story" data-i18n="navStory">The story</a><a href="#features" data-i18n="navFeatures">Memories</a><a href="#how" data-i18n="navHow">How it works</a></div>
+      <div class="nav-actions"><button class="lang" id="language" type="button" aria-label="Switch language" aria-pressed="false">العربية</button><a class="nav-cta" href="#download-panel" data-i18n="navDownload">Get TillThen</a></div>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="hero-wrap">
+      <section class="shell hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow" data-i18n="eyebrow">A shared time capsule for two</div>
+          <h1 id="hero-title"><span data-i18n="hero1">Some things</span><br><em data-i18n="hero2">are worth waiting for.</em></h1>
+          <p class="tagline">For everything you want to tell them… later.</p>
+          <p class="lead" data-i18n="lead">A letter you aren't ready to send. A photo you never want to lose. A voice you'll want to hear again. Seal your moments together, and open them on a day you choose.</p>
+          <div class="download" id="download-panel">
+            <div class="download-top">
+              <img src="./assets/tillthen-icon.png" alt="" width="48" height="48">
+              <div><p class="download-name" data-i18n="downloadTitle">TillThen for Android</p><p class="download-detail" data-i18n="downloadSubtitle">Private alpha · One couple</p></div>
+              <span class="version" id="version" data-i18n="versionPending">Not released</span>
+            </div>
+            <a class="download-btn" id="download" aria-disabled="true" tabindex="-1" aria-describedby="release-status"><svg aria-hidden="true"><use href="#i-download"/></svg><span id="button-label" data-i18n="downloadPending">Coming soon</span></a>
+            <p class="status" id="release-status" role="status" aria-live="polite" data-i18n="checking">Checking whether an Android test build is available…</p>
+            <a class="release-link" href="https://github.com/abdallahkhayroun00-crypto/TillThen-download/releases" target="_blank" rel="noopener noreferrer"><span data-i18n="viewReleases">View release history</span><svg aria-hidden="true" width="15" height="15"><use href="#i-arrow"/></svg></a>
+          </div>
+          <p class="hero-foot"><span data-i18n="heroFoot1">Android alpha</span><span data-i18n="heroFoot2">Made for two</span><span data-i18n="heroFoot3">One shared Box</span></p>
+        </div>
+        <div class="art" aria-label="Concept artwork showing the official TillThen time capsule symbol">
+          <div class="stars" aria-hidden="true"></div>
+          <div class="art-top" data-i18n="artTop">Keep the moment. Save the feeling.</div>
+          <div class="orbit" aria-hidden="true"></div>
+          <img class="art-symbol" src="./assets/tillthen-symbol.png" alt="TillThen's official sealed Box and clock symbol" width="466" height="614">
+          <div class="floating a" aria-hidden="true"><strong><i></i><span data-i18n="floatLetter">A letter, sealed</span></strong><small data-i18n="floatLetterSub">Just for the two of you</small></div>
+          <div class="floating b" aria-hidden="true"><strong><i></i><span data-i18n="floatDate">Opening day</span></strong><small data-i18n="floatDateSub">A moment to look forward to</small></div>
+          <p class="art-quote" data-i18n="artQuote">“Not goodbye. Just… till then.”</p>
+          <p class="illustrative" data-i18n="artNote">Illustrative concept · Not an actual app screenshot</p>
+        </div>
+      </section>
+    </div>
+    <section class="intro" id="story" aria-labelledby="story-title">
+      <div class="shell intro-inner"><div><p class="section-kicker" data-i18n="storyKicker">More than a message</p><h2 id="story-title" data-i18n="storyTitle">A little piece of now, waiting for later.</h2></div><p data-i18n="storyBody">TillThen is a shared emotional time capsule. Two people choose an opening day, keep adding memories to their Box, and save the experience of discovering them for the future. Once a memory is sealed, it stays out of view until the Box is ready.</p></div>
+    </section>
+    <section class="shell features-section" id="features" aria-labelledby="features-title">
+      <p class="section-kicker" data-i18n="featuresKicker">What goes inside</p><h2 class="section-title" id="features-title" data-i18n="featuresTitle">Your moments, in every form.</h2>
+      <p class="section-sub" data-i18n="featuresSubtitle">Little things today can become everything tomorrow. The first alpha is designed around three kinds of memories.</p>
+      <div class="features">
+        <article class="feature"><div class="feature-icon"><svg aria-hidden="true"><use href="#i-letter"/></svg></div><h3 data-i18n="f1title">Words from the heart.</h3><p data-i18n="f1body">Write a letter for a day when the words will mean even more. Seal it now; read it together later.</p></article>
+        <article class="feature"><div class="feature-icon"><svg aria-hidden="true"><use href="#i-photo"/></svg></div><h3 data-i18n="f2title">A moment, kept.</h3><p data-i18n="f2body">Save a photo that belongs to your shared story and rediscover it on opening day.</p></article>
+        <article class="feature"><div class="feature-icon"><svg aria-hidden="true"><use href="#i-voice"/></svg></div><h3 data-i18n="f3title">The sound of today.</h3><p data-i18n="f3body">Record a voice note: a laugh, a thought, or something you simply want them to hear later.</p></article>
+      </div>
+    </section>
+    <section class="ritual" id="how" aria-labelledby="how-title"><div class="shell">
+      <div class="ritual-head"><p class="section-kicker" data-i18n="howKicker">The TillThen ritual</p><h2 id="how-title" data-i18n="howTitle">Made to be opened together.</h2><p data-i18n="howSubtitle">The idea is simple. The moment is yours.</p></div>
+      <div class="ritual-grid">
+        <article class="ritual-item"><span class="ritual-num">01</span><h3 data-i18n="s1title">Find your person.</h3><p data-i18n="s1body">Connect with one partner using a QR code or a temporary pairing code.</p></article>
+        <article class="ritual-item"><span class="ritual-num">02</span><h3 data-i18n="s2title">Choose your day.</h3><p data-i18n="s2body">Agree on an opening date and add letters, photos, and voice notes to your shared Box.</p></article>
+        <article class="ritual-item"><span class="ritual-num">03</span><h3 data-i18n="s3title">Let time do its part.</h3><p data-i18n="s3body">After sealing, keep each memory for the future. When the date arrives, open your Box at your own pace.</p></article>
+      </div>
+    </div></section>
+    <section class="shell install" id="install" aria-labelledby="install-title">
+      <div class="install-head"><div><p class="section-kicker" data-i18n="installKicker">Android download</p><h2 class="section-title" id="install-title" data-i18n="installTitle">When the time comes.</h2></div><p data-i18n="installIntro">This page will offer the Android APK after a test build is published. Here's how installation works.</p></div>
+      <div class="install-steps">
+        <article class="install-step"><b>01</b><h3 data-i18n="i1title">Download the test build</h3><p data-i18n="i1body">When a public release includes an APK, the download button above will activate automatically.</p></article>
+        <article class="install-step"><b>02</b><h3 data-i18n="i2title">Open the APK on Android</h3><p data-i18n="i2body">Open the downloaded file on your Android phone. You may be asked to allow installation from your browser.</p></article>
+        <article class="install-step"><b>03</b><h3 data-i18n="i3title">Start your time capsule</h3><p data-i18n="i3body">Once the test app is ready, open TillThen and follow the on-screen setup together.</p></article>
+      </div>
+      <p class="install-footnote" data-i18n="installNote">Android only · Early test build · This public page is not an app store. Installing updates requires downloading a newer APK.</p>
+    </section>
+    <section class="closing"><div class="shell closing-inner"><div><h2 data-i18n="closeTitle">Until then, keep the moment.</h2><p>For everything you want to tell them… later.</p></div><a href="#download-panel" data-i18n="closeButton">Back to download</a></div></section>
+  </main>
+  <footer><div class="shell footer-inner"><div class="footer-brand"><img src="./assets/tillthen-symbol.png" width="25" height="30" alt=""><span>TillThen</span></div><span>© <span id="year">2026</span> TillThen. <span data-i18n="footer">A little time capsule for two.</span></span></div></footer>
+  <script>
+    (function () {
+      "use strict";
+      var api = "https://api.github.com/repos/abdallahkhayroun00-crypto/TillThen-download/releases?per_page=30";
+      var download = document.getElementById("download");
+      var buttonLabel = document.getElementById("button-label");
+      var status = document.getElementById("release-status");
+      var version = document.getElementById("version");
+      var switcher = document.getElementById("language");
+      var language = "en";
+      var available = null;
+      var state = "checking";
+      var copy = {
+        en: {
+          navStory:"The story",navFeatures:"Memories",navHow:"How it works",navDownload:"Get TillThen",
+          eyebrow:"A shared time capsule for two",hero1:"Some things",hero2:"are worth waiting for.",
+          lead:"A letter you aren't ready to send. A photo you never want to lose. A voice you'll want to hear again. Seal your moments together, and open them on a day you choose.",
+          downloadTitle:"TillThen for Android",downloadSubtitle:"Private alpha · One couple",versionPending:"Not released",
+          downloadPending:"Coming soon",downloadReady:"Download for Android",
+          checking:"Checking whether an Android test build is available…",
+          notReady:"No Android APK has been published yet. The download button will activate when a test build is ready.",
+          error:"The release check is unavailable right now. Please check the GitHub release history directly.",
+          ready:"An Android test build is available. Download the APK and open the file on your phone to install it.",
+          viewReleases:"View release history",heroFoot1:"Android alpha",heroFoot2:"Made for two",heroFoot3:"One shared Box",
+          artTop:"Keep the moment. Save the feeling.",floatLetter:"A letter, sealed",floatLetterSub:"Just for the two of you",
+          floatDate:"Opening day",floatDateSub:"A moment to look forward to",artQuote:"“Not goodbye. Just… till then.”",
+          artNote:"Illustrative concept · Not an actual app screenshot",
+          storyKicker:"More than a message",storyTitle:"A little piece of now, waiting for later.",
+          storyBody:"TillThen is a shared emotional time capsule. Two people choose an opening day, keep adding memories to their Box, and save the experience of discovering them for the future. Once a memory is sealed, it stays out of view until the Box is ready.",
+          featuresKicker:"What goes inside",featuresTitle:"Your moments, in every form.",
+          featuresSubtitle:"Little things today can become everything tomorrow. The first alpha is designed around three kinds of memories.",
+          f1title:"Words from the heart.",f1body:"Write a letter for a day when the words will mean even more. Seal it now; read it together later.",
+          f2title:"A moment, kept.",f2body:"Save a photo that belongs to your shared story and rediscover it on opening day.",
+          f3title:"The sound of today.",f3body:"Record a voice note: a laugh, a thought, or something you simply want them to hear later.",
+          howKicker:"The TillThen ritual",howTitle:"Made to be opened together.",howSubtitle:"The idea is simple. The moment is yours.",
+          s1title:"Find your person.",s1body:"Connect with one partner using a QR code or a temporary pairing code.",
+          s2title:"Choose your day.",s2body:"Agree on an opening date and add letters, photos, and voice notes to your shared Box.",
+          s3title:"Let time do its part.",s3body:"After sealing, keep each memory for the future. When the date arrives, open your Box at your own pace.",
+          installKicker:"Android download",installTitle:"When the time comes.",installIntro:"This page will offer the Android APK after a test build is published. Here's how installation works.",
+          i1title:"Download the test build",i1body:"When a public release includes an APK, the download button above will activate automatically.",
+          i2title:"Open the APK on Android",i2body:"Open the downloaded file on your Android phone. You may be asked to allow installation from your browser.",
+          i3title:"Start your time capsule",i3body:"Once the test app is ready, open TillThen and follow the on-screen setup together.",
+          installNote:"Android only · Early test build · This public page is not an app store. Installing updates requires downloading a newer APK.",
+          closeTitle:"Until then, keep the moment.",closeButton:"Back to download",footer:"A little time capsule for two."
+        },
+        ar: {
+          navStory:"الفكرة",navFeatures:"الذكريات",navHow:"كيفاش كيخدم",navDownload:"حمّل TillThen",
+          eyebrow:"كبسولة ذكريات مشتركة لجوج",hero1:"كاين لحظات",hero2:"كتستاهل التسنا.",
+          lead:"رسالة باقي ما جا وقتها، صورة ما بغيتيش تنساها، وصوت غادي تبغي تسمعو من جديد. احتافظو بالذكريات ديالكم وفتحوها فنهار كتختاروه بجوج.",
+          downloadTitle:"TillThen للأندرويد",downloadSubtitle:"نسخة تجريبية خاصة · جوج أشخاص",versionPending:"مازال ما تنشرش",
+          downloadPending:"التحميل متاح قريباً",downloadReady:"تحميل TillThen للأندرويد",
+          checking:"كنتحققو واش كاينة نسخة تجريبية للأندرويد…",
+          notReady:"مازال ما تنشرات حتى نسخة APK للأندرويد. الزر غادي يتفعّل ملي تولّي نسخة تجريبية واجدة.",
+          error:"ما قدرناش نتحققو من الإصدارات دابا. شوف صفحة الإصدارات على GitHub مباشرة.",
+          ready:"كاينة نسخة تجريبية للأندرويد. حمّل APK وحلّ الملف فالتليفون باش تثبّت التطبيق.",
+          viewReleases:"شوف الإصدارات",heroFoot1:"نسخة Android تجريبية",heroFoot2:"مصمّم لجوج",heroFoot3:"صندوق ذكريات واحد",
+          artTop:"احتافظ باللحظة وبالإحساس.",floatLetter:"رسالة مسدودة",floatLetterSub:"غير ليكم بجوج",
+          floatDate:"نهار الفتح",floatDateSub:"لحظة كتستاهل التسنا",artQuote:"“ماشي وداع… غير حتى لذاك النهار.”",
+          artNote:"تصوّر توضيحي · ماشي صورة حقيقية من التطبيق",
+          storyKicker:"أكثر من مجرد رسالة",storyTitle:"قطعة من دابا، كتستنى من بعد.",
+          storyBody:"TillThen كبسولة ذكريات كتجمع جوج أشخاص. كتختارو النهار اللي غادي تحلو فيه الصندوق وكتبقاو تزيدو فيه الذكريات. ملي كتسدّ ذكرى، كتبقى ما بايناش حتى يوصل نهار الفتح.",
+          featuresKicker:"شنو كتحطّو فالصندوق",featuresTitle:"لحظاتكم، كيفما كانت.",
+          featuresSubtitle:"الحوايج الصغيرة ديال اليوم تقدر تولّي ذكريات كبيرة من بعد. النسخة التجريبية الأولى مصمّمة لثلاثة أنواع ديال الذكريات.",
+          f1title:"كلمات من القلب.",f1body:"كتب رسالة لنهار غادي يكون لكلامك فيه معنى أكبر. سدّها دابا وقراوها من بعد.",
+          f2title:"صورة كتستاهل تبقى.",f2body:"احتافظ بصورة من حكايتكم المشتركة وعاودو اكتاشفوها نهار الفتح.",
+          f3title:"صوت اليوم.",f3body:"سجّل ملاحظة صوتية: ضحكة، فكرة، ولا شي كلام بغيتي الطرف الآخر يسمعو من بعد.",
+          howKicker:"تجربة TillThen",howTitle:"ذكريات كتتحلّ فنهارها.",howSubtitle:"الفكرة بسيطة، واللحظة ديالكم.",
+          s1title:"تلاقى مع شريكك.",s1body:"ربط الحساب ديالك بشخص واحد باستعمال QR Code ولا رمز ربط مؤقت.",
+          s2title:"اختارو النهار ديالكم.",s2body:"تافقو على تاريخ الفتح وزيدو الرسائل والصور والتسجيلات الصوتية للصندوق المشترك.",
+          s3title:"خليو الوقت يدوز.",s3body:"ملي كتسدّ ذكرى كتخليوها للمستقبل. منين يوصل النهار، كل واحد يقدر يحلّ الصندوق بالوتيرة ديالو.",
+          installKicker:"تحميل الأندرويد",installTitle:"ملي يجي الوقت.",installIntro:"هاد الصفحة غادي توفّر ملف APK ملي تتنشر النسخة التجريبية. ها كيفاش تقدر تثبّتو.",
+          i1title:"حمّل النسخة التجريبية",i1body:"ملي تتنشر نسخة فيها APK، زر التحميل اللي فوق غادي يتفعّل تلقائياً.",
+          i2title:"حلّ APK فالأندرويد",i2body:"حلّ الملف اللي حمّلتي فالتليفون. ممكن يطلب منك تسمح بالتثبيت من المتصفح.",
+          i3title:"بداو كبسولة الذكريات",i3body:"ملي التطبيق التجريبي يكون واجد، حلّ TillThen وتبعو خطوات الإعداد بجوج.",
+          installNote:"أندرويد فقط · نسخة تجريبية · هادي صفحة تحميل عمومية، ماشي متجر تطبيقات. التحديث كيحتاج تحميل APK جديد.",
+          closeTitle:"حتى لذاك النهار، احتافظ باللحظة.",closeButton:"رجع للتحميل",footer:"كبسولة ذكريات صغيرة لجوج."
+        }
+      };
+      function render() {
+        document.documentElement.lang=language;
+        document.documentElement.dir=language==="ar"?"rtl":"ltr";
+        document.querySelectorAll("[data-i18n]").forEach(function(node){
+          var key=node.getAttribute("data-i18n");
+          if(Object.prototype.hasOwnProperty.call(copy[language],key))node.textContent=copy[language][key];
+        });
+        switcher.textContent=language==="en"?"العربية":"English";
+        switcher.setAttribute("aria-pressed",language==="ar"?"true":"false");
+        buttonLabel.textContent=copy[language][available?"downloadReady":"downloadPending"];
+        status.textContent=copy[language][state];
+        version.textContent=available?available.name:copy[language].versionPending;
+      }
+      download.addEventListener("click",function(event){if(!available)event.preventDefault();});
+      switcher.addEventListener("click",function(){language=language==="en"?"ar":"en";render();});
+      document.getElementById("year").textContent=String(new Date().getFullYear());
+      render();
+      fetch(api,{headers:{"Accept":"application/vnd.github+json"}})
+        .then(function(response){if(!response.ok)throw Error("GitHub releases request failed");return response.json();})
+        .then(function(releases){
+          if(!Array.isArray(releases))throw Error("Unexpected GitHub response");
+          var found=null;
+          for(var i=0;i<releases.length;i++){
+            var release=releases[i];
+            if(release.draft||!Array.isArray(release.assets))continue;
+            var apk=release.assets.find(function(asset){
+              return /\.apk$/i.test(asset.name||"")&&typeof asset.browser_download_url==="string"&&
+                /^https:\/\/github\.com\/abdallahkhayroun00-crypto\/TillThen-download\/releases\/download\//.test(asset.browser_download_url);
+            });
+            if(apk){found={url:apk.browser_download_url,name:release.tag_name||release.name||"Android"};break;}
+          }
+          if(found){
+            available=found;
+            download.href=found.url;
+            download.removeAttribute("aria-disabled");
+            download.removeAttribute("tabindex");
+            state="ready";
+          }else{state="notReady";}
+          render();
+        })
+        .catch(function(){state="error";render();});
+    }());
+  </script>
+</body>
+</html>
